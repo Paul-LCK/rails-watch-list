@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Add a Critic in the bookmark</h1>
+
+      <%= simple_form_for [@list, @bookmark] do |f|%>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
+      <%= f.submit 'submit critic', class:'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div> %>

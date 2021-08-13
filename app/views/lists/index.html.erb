@@ -1,0 +1,28 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Save any kind of movies</h1>
+      <p>Classic</p>
+
+
+      <h2>MY LISTS</h2>
+      <p><%= link_to '+ Create a Movie List', new_list_path, class: "btn btn-successs" %></p>
+
+
+      <div class="cards">
+        <% @lists.each do |list| %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <%= link_to list.name, list_path(list.id), class: "btn btn-ghost" %>
+          </div>
+        <% end %>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+</div>
