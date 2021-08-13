@@ -11,5 +11,8 @@
     "turbolinks": "^5.2.0",
     "webpack": "^5.50.0"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-cli": "^4.7.2"
+  }
 }
