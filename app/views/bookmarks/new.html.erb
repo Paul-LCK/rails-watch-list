@@ -6,6 +6,7 @@
       <%= simple_form_for [@list, @bookmark] do |f|%>
       <%= f.association :movie %>
       <%= f.input :comment %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.submit 'submit critic', class:'btn btn-success' %>
       <% end %>
     </div>

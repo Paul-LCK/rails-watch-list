@@ -9,7 +9,9 @@
           <h2>Reviews</h2>
             <div class="cards">
               <% @list.bookmarks.each do |bookmark| %>
-                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @list.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                    <% end %>
                   <%= bookmark.movie.title %>
                   <%= bookmark.comment %>
                   <%= link_to "",

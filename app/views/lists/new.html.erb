@@ -4,6 +4,7 @@
       <h1>Add a List</h1>
         <%= simple_form_for(@list) do |f| %>
         <%= f.input :name %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.submit "Submit comment", class: "btn btn-success" %>
         <% end %>
         <%= link_to 'Back to the Lists', lists_path, class: "btn btn-success" %>
